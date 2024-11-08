@@ -7,4 +7,11 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="gray">#808080</color>
+    <color name="athens_gray">#9CA3AF</color>
+    <color name="transparent_gray">#80000000</color>
+    <color name="quantum_black_text">#dd000000</color>
+    <color name="mischka">#D1D5DB</color>
+    <color name="link_water">#E6EAF8</color>
+    <color name="gallery">#EFEFEF</color>
 </resources>
