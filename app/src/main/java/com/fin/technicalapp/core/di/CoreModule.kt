@@ -47,24 +47,24 @@ val networkModule = module {
 
     single { get<Retrofit>().create(ProductApi::class.java) }
 
-    fun getChuckerInterceptor(context: Context): ChuckerInterceptor {
-        return ChuckerInterceptor.Builder(context).build()
-    }
+}
+fun getChuckerInterceptor(context: Context): ChuckerInterceptor {
+    return ChuckerInterceptor.Builder(context).build()
+}
 
-    val repositoryModule = module {
-        single { ProductDatabase.getInstance(androidContext()) }
-        single { get<ProductDatabase>().cartDao() }
+val repositoryModule = module {
+    single { ProductDatabase.getInstance(androidContext()) }
+    single { get<ProductDatabase>().cartDao() }
 
-        factory { AppExecutors() }
-        single<AuthenticationRepository> { AuthenticationRepositoryImpl(get(), get()) }
-        single<ProductRepository> { ProductRepositoryImpl(get(), get()) }
-    }
+    factory { AppExecutors() }
+    single<AuthenticationRepository> { AuthenticationRepositoryImpl(get(), get()) }
+    single<ProductRepository> { ProductRepositoryImpl(get(), get()) }
+}
 
-    val stashModule = module {
-        single<SharedPreferences> {
-            androidContext().getSharedPreferences("app_preferences", Context.MODE_PRIVATE)
-        }
-        single<CoroutineDispatcher> { Dispatchers.IO }
-        single<Stash> { StashImpl(get(), get()) }
+val stashModule = module {
+    single<SharedPreferences> {
+        androidContext().getSharedPreferences("app_preferences", Context.MODE_PRIVATE)
     }
+    single<CoroutineDispatcher> { Dispatchers.IO }
+    single<Stash> { StashImpl(get(), get()) }
 }

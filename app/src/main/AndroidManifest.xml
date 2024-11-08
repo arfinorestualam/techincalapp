@@ -17,21 +17,6 @@
         android:theme="@style/Theme.TechnicalApp"
         tools:targetApi="31">
         <activity
-            android:name=".feature.summary.SummaryActivity"
-            android:exported="false" />
-        <activity
-            android:name=".feature.login.LoginActivity"
-            android:exported="false" />
-        <activity
-            android:name=".feature.home.HomeActivity"
-            android:exported="false" />
-        <activity
-            android:name=".feature.detail.DetailActivity"
-            android:exported="false" />
-        <activity
-            android:name=".feature.cart.CartActivity"
-            android:exported="false" />
-        <activity
             android:name=".SplashActivity"
             android:exported="true"
             android:theme="@style/SplashTheme">
@@ -41,6 +26,21 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".feature.summary.SummaryActivity"
+            android:exported="true" />
+        <activity
+            android:name=".feature.login.LoginActivity"
+            android:exported="true" />
+        <activity
+            android:name=".feature.home.HomeActivity"
+            android:exported="true" />
+        <activity
+            android:name=".feature.detail.DetailActivity"
+            android:exported="true" />
+        <activity
+            android:name=".feature.cart.CartActivity"
+            android:exported="true" />
     </application>
 
 </manifest>

@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Base application theme. -->
+    <style name="Base.Theme.TechnicalApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/teal_700</item>
+    </style>
 
-    <style name="Theme.TechnicalApp" parent="android:Theme.Material.Light.NoActionBar" />
+    <style name="Theme.TechnicalApp" parent="Base.Theme.TechnicalApp" />
 </resources>
